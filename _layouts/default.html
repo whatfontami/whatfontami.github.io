@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ page.title }}</title>
+    <!--<title>{{ page.title }}</title>-->
+    <title>What Font Am I?</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <!-- Optional theme -->
@@ -20,44 +21,53 @@
   </head>
   <body>
     <ul id="nav">
-      <li><a href="#intro" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
-      <li><a href="#second" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
-      <li><a href="#third" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
-      <li><a href="#fifth" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
+      <li><a href="#start" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
+      <li><a href="#one" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
+      <li><a href="#two" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
     </ul>
     
-    <div id="intro">
+    <div id="start">
       <div class="container">
         <div class="row">
           <div class="col-sm-8">
             <h2>What Font Am I?</h2>
             <p>The only quiz you will ever need.</p>
             <div id="get-started">
-              <a href="#second" class="btn btn-primary">Lets Get Started!</a>
+              <a href="#one" class="btn btn-primary">Lets Get Started!</a>
             </div>
           </div>
         </div>
       </div>
     </div>
     
-    <div id="second">
+    <div id="one">
       <div class="container">
         <div class="row">
           <div class="col-sm-8">
-            <h2>Pirate vs Ninjas - Who woul'd win?</h2>
+            <h2>Pirate vs Ninjas - Who would win?</h2>
             <p>orem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis et ante vel elementum. Ut tincidunt iaculis quam vel fermentum. Ut feugiat, tortor nec vestibulum eleifend, elit magna elementum diam, a consectetur nisi nunc ultrices arcu. Nulla fermentum velit turpis, id rutrum nisi eleifend id. Morbi scelerisque, nulla sit amet auctor laoreet, dui mauris rutrum dui, in dictum lorem mauris ut mauris. Suspendisse vehicula elementum sagittis. Aenean eleifend congue sem, et vestibulum nunc sodales a. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus vehicula tempus gravida. Quisque porttitor porta quam, ac mattis tortor.</p>
+
+            <div id="one-btn">
+              <a href="#two" class="btn btn-primary">Next</a>
+            </div>
+          </div>
         </div> <!--.story-->
       </div>
     </div> <!--#second-->
     
-    <div id="third">
+    <div id="two">
       <div class="container">
           <div class="row">
             <div class="col-sm-8">
-              <h2>What Happens When JavaScript is Disabled?</h2>
+              <h2>Another Question?</h2>
               <p>orem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis et ante vel elementum. Ut tincidunt iaculis quam vel fermentum. Ut feugiat, tortor nec vestibulum eleifend, elit magna elementum diam, a consectetur nisi nunc ultrices arcu. Nulla fermentum velit turpis, id rutrum nisi eleifend id. Morbi scelerisque, nulla sit amet auctor laoreet, dui mauris rutrum dui, in dictum lorem mauris ut mauris. Suspendisse vehicula elementum sagittis. Aenean eleifend congue sem, et vestibulum nunc sodales a. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus vehicula tempus gravida. Quisque porttitor porta quam, ac mattis tortor.</p>
+
+            <div id="two-btn">
+              <a href="#start" class="btn btn-primary">done</a>
+            </div>
             </div>
         </div>
+      </div>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -75,14 +85,17 @@
 
       $('#nav').localScroll(800);
       $('#get-started').localScroll(800);
+
+      $('#one-btn').localScroll(800);
+      $('#two-btn').localScroll(800);
       
       //.parallax(xPosition, speedFactor, outerHeight) options:
       //xPosition - Horizontal position of the element
       //inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
       //outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
-      $('#intro').parallax("50%", 0.1);
-      $('#second').parallax("50%", 0.1);
-      $('#third').parallax("50%", 0.3);
+      $('#start').parallax("50%", 0.1);
+      $('#one').parallax("50%", 0.1);
+      $('#two').parallax("50%", 0.3);
     })
     </script>
   </body>
