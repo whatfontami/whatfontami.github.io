@@ -7,3 +7,81 @@ div#projects {
     height: 100vh;
     background: yellow;
 }
+
+#header h1, #pixels{
+  color: #48941A;
+}
+
+
+.center{
+  font-size: 2.5em;
+  padding: 80px 0 0 0;
+  text-align: center;
+}
+
+#nav{
+  list-style: none;
+  position: fixed;
+  right: 20px;
+}
+
+#nav li{
+  margin: 0 0 15px 0; 
+}
+
+#header, #intro, #second{
+  width: 100%;
+}
+
+#intro{
+  background:url(/images/lovetypography.png) 50% 0 no-repeat fixed;
+  background-size: 100%;
+  color: white;
+  min-height: 100vh; 
+  margin: 0 auto;
+  padding: 0;
+}
+
+#second{
+  background: url(/images/secondBG.jpg) 50% 0 no-repeat fixed;
+  color: white;
+  min-height: 100vh; 
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0;
+}
+
+#second .bg{
+  background: url(/images/trainers.png) 50% 0 no-repeat fixed;
+  min-height: 100vh; 
+  margin: 0 auto;
+  padding: 0;
+  position: absolute;
+  width: 900px;
+  z-index: 200;
+}
+
+#third{
+  background: url(/images/thirdBG.jpg) 50% 0 no-repeat fixed;
+  color: white;
+  min-height: 100vh; 
+  padding: 100px 0 0 0; 
+}
+
+#fifth{
+  background: #ccc;
+  height: 400px;
+  margin: 0 auto;
+  padding: 40px 0 0 0;
+}
+
+#nav{
+  list-style: none;
+  position: fixed;
+  right: 20px;
+  z-index: 100;
+}
+
+#nav li{
+  margin: 0 0 15px 0; 
+}
