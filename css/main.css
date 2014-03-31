@@ -11,6 +11,7 @@
 
 .slide{
   background-size: 100%;
+  background-color: black;
   color: white;
   min-height: 100vh; 
   margin: 0 auto;

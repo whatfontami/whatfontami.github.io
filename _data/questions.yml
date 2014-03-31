@@ -1,12 +1,52 @@
-- title: one
-  question: Pirates or Ninjas?
+- question: Pirates or Ninjas?
   answers: ["Pirates, for sure!", 
   			"Ninjas, definitely",
   			"Tie.",
   			"Wizards."]
 
-- title: two
-  question: Crunchy or Smooth?
+- question: Crunchy or Smooth?
+  answers: ["Crunchy!", 
+  			"Smooth.",
+  			"BOTH!!.",
+  			"I'm allergic."]
+
+- question: "People describe my personality as:"
+  answers: ["Crunchy!", 
+  			"Smooth.",
+  			"BOTH!!.",
+  			"I'm allergic."]
+
+- question: Favorite Time Period?
+  answers: ["Crunchy!", 
+  			"Smooth.",
+  			"BOTH!!.",
+  			"I'm allergic."]
+
+- question: Favorite Pizza Topping?
+  answers: ["Crunchy!", 
+  			"Smooth.",
+  			"BOTH!!.",
+  			"I'm allergic."]
+
+- question: Favorite Ice Cream?
+  answers: ["Crunchy!", 
+  			"Smooth.",
+  			"BOTH!!.",
+  			"I'm allergic."]
+
+- question: "If I were an internet meme, I'd be:"
+  answers: ["Crunchy!", 
+  			"Smooth.",
+  			"BOTH!!.",
+  			"I'm allergic."]
+
+- question: "Favorite Movie:"
+  answers: ["Crunchy!", 
+  			"Smooth.",
+  			"BOTH!!.",
+  			"I'm allergic."]
+
+- question: "Favorite TV Show:"
   answers: ["Crunchy!", 
   			"Smooth.",
   			"BOTH!!.",
