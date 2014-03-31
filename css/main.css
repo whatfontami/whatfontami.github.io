@@ -9,9 +9,7 @@
   margin: 0 0 15px 0; 
 }
 
-
-#start{
-  background:url(/images/lovetypography.jpg) 50% 0 no-repeat fixed;
+.slide{
   background-size: 100%;
   color: white;
   min-height: 100vh; 
@@ -19,17 +17,18 @@
   padding: 0;
 }
 
-#one{
-  background: url(/images/helvetica.jpg) 50% 0 no-repeat fixed;
-  color: white;
-  min-height: 100vh; 
-  margin: 0 auto;
-  padding: 0;
+#start{
+  background:url(/images/lovetypography.jpg) 50% 0 no-repeat fixed;
 }
 
-#two{
+#question-1{
+  background: url(/images/helvetica.jpg) 50% 0 no-repeat fixed;
+}
+
+#question-2{
   background: url(/images/serif.jpg) 50% 0 no-repeat fixed;
-  color: white;
-  min-height: 100vh; 
-  padding: 100px 0 0 0; 
+}
+
+#answer{
+  background:url(/images/lovetypography.jpg) 50% 0 no-repeat fixed;
 }

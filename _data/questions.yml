@@ -1,0 +1,13 @@
+- title: one
+  question: Pirates or Ninjas?
+  answers: ["Pirates, for sure!", 
+  			"Ninjas, definitely",
+  			"Tie.",
+  			"Wizards."]
+
+- title: two
+  question: Crunchy or Smooth?
+  answers: ["Crunchy!", 
+  			"Smooth.",
+  			"BOTH!!.",
+  			"I'm allergic."]

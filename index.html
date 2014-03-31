@@ -1,13 +1,124 @@
 ---
 layout: default
-title: Your New Jekyll Site
+title: What Font Am I?
 ---
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+<ul id="nav">
+      <li><a href="#start" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
+      <li><a href="#one" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
+      <li><a href="#two" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
+    </ul>
+    
+    <div id="start" class="slide">
+      <div class="container">
+        <div class="row">
+        	<div class="col-sm-8">
+			    <h2>What Font Am I?</h2>
+			    <p>The only quiz you will ever need.</p>
+			    <div id="get-started">
+			    	<a href="#question-1" class="btn btn-primary">Lets Get Started!</a>
+			    </div>
+			</div>
+        </div>
+      </div>
+    </div>
+
+    <form method=post>
+    {% for question in site.data.questions %}
+    	{% assign question-number = forloop.index %}
+	    <div id="question-{{ forloop.index }}" class="slide">
+	      <div class="container">
+	        <div class="row">
+	        	<div class="col-sm-8">
+				    <h2>{{ question.question }}</h2>
+				    {% for answer in question.answers %}
+				    	<p><input type="radio" name="question-{{ question-number }}" value="{{ forloop.index }}"> {{ answer }} </p>
+				    {% endfor %}
+				    <div id="answer-question-{{ forloop.index }}">
+				    {% if forloop.last %}
+				    	<a href="#answer" class="btn btn-primary">Submit</a>
+				    {% else %}
+			    		<a href="#question-{{ forloop.index | plus:1 }}" class="btn btn-primary">Lets Get Started!</a>
+				    {% endif %}
+			    	</div>
+				</div>
+	        </div>
+	      </div>
+	    </div>
+	    
     {% endfor %}
-  </ul>
-</div>
+    </form>
+
+    <div id="answer" class="slide">
+      <div class="container">
+        <div class="row">
+        	<div class="col-sm-8">
+			    <h2>Your Comic Sans!</h2>
+			</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="/js/holder.js"></script>
+    <script type="text/javascript" src="/js/jquery.parallax-1.1.5.js"></script>
+    <script type="text/javascript" src="/js/jquery.localScroll-1.3.5-min.js"></script>
+    <script type="text/javascript" src="/js/jquery.scrollTo-1.4.11-min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+
+      $('#nav').localScroll(800);
+      $('#get-started').localScroll(800);
+
+      {% for question in site.data.questions %}
+      	$('#answer-question-{{ forloop.index }}').localScroll(800);
+	  {% endfor %}
+      
+      //.parallax(xPosition, speedFactor, outerHeight) options:
+      //xPosition - Horizontal position of the element
+      
+      //inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
+
+      //outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
+
+      $('#start').parallax("50%", 0.1);
+      {% for question in site.data.questions %}
+		$('#{{ forloop.index }}').parallax("50%", 0.1);
+	  {% endfor %}
+    })
+    <!--
+	function test_it(entry) {
+		if (entry.value!=null && entry.value.length!=0) {
+			entry.value=""+ eval(entry.value);
+		}
+		computeForm(entry.form);
+	}
+	
+	function computeForm(form) {
+		var total=0
+
+		for (var count=0; count<4; count++){
+			if (form.a[count].checked){
+				var total=total+parseInt(form.a[count].value);
+			}
+		}
+
+		for (var count=0; count<4; count++){
+			if (form.b[count].checked){
+				var total=total+parseInt(form.b[count].value);
+			}
+		}
+		if (total<0){ window.location="http://www.yoursite.com/answer1.shtml" }
+		else if (total<25){ window.location="http://www.yoursite.com/answer2.shtml" }
+		else if (total<50){ window.location="http://www.yoursite.com/answer3.shtml" }
+		else if (total<100){ window.location="http://www.yoursite.com/answer4.shtml" }
+		else { window.location="http://www.yoursite.com/answer5.shtml" }
+	}
+
+	//-->
+    </script>
